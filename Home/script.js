@@ -47,3 +47,13 @@ gsap.to(".panel1 .last h1", {
         scrub:1
     }
 })
+gsap.to(".highlight-animate", {
+    backgroundSize: "100% 100%",   // fills the text from left → right
+    ease: "none",
+    scrollTrigger: {
+        trigger: ".panel2",
+        start: "top center",
+        end: "bottom top",
+        scrub: 1,
+    }
+});
