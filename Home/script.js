@@ -57,3 +57,33 @@ gsap.to(".highlight-animate", {
         scrub: 1,
     }
 });
+
+// const link = document.querySelector(".hover-follow");
+// const icon = link.querySelector("span");
+
+// link.addEventListener("mousemove", (e) => {
+//     const rect = link.getBoundingClientRect();
+
+//     const x = e.clientX - rect.left - rect.width / 2;
+//     const y = e.clientY - rect.top - rect.height / 2;
+
+//     icon.style.transform = `translate(${x * 0.4}px, ${y * 0.4}px)`;
+// });
+
+// link.addEventListener("mouseleave", () => {
+//     icon.style.transform = "translate(0, 0)";
+// });
+
+
+const link = document.querySelector(".hover-follow");
+const icon = link.querySelector("span");
+
+link.addEventListener("mousemove", (e) => {
+    const rect = link.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width /2;
+    const y = e.clientY - rect.top - rect.height/2;
+    icon.style.transform = `translate(${x * 0.4}px, ${y * 0.4}px) scale(1.5)`;
+})
+link.addEventListener("mouseleave", (e) => {
+    icon.style.transform = "translate(0, 0)";
+})
