@@ -1,25 +1,23 @@
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const panels = gsap.utils.toArray(".panel");
+const panels = gsap.utils.toArray(".horizontal-sections .panel");
 
-const totalPanelWidth = panels.reduce((total, panel, index) => {
-    return total + (index < panels.length - 1? panel.offsetWidth:0)
-}, 0)
 
-// Set up the GSAP animation timeline
+// total horizontal distance we need to scroll
+const totalWidth =
+  panels.reduce((sum, panel) => sum + panel.offsetWidth, 0) - window.innerWidth;
+
 gsap.to(".horizontal-sections", {
-    x: `-${totalPanelWidth}px`, 
-    ease: "none", 
-    scrollTrigger: {
-        trigger: ".horizontal-sections-wrapper", // The tall container that drives the scroll
-        id: "horizontalScroll",
-        pin: true, // Pin the horizontal-sections to the viewport
-        scrub: 1, // Smoothly link scroll to animation
-        // Start: when the top of the wrapper hits the top of the viewport
-        start: "top top", 
-        end: "bottom top", 
-    }
+  x: () => `-${totalWidth}px`,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".horizontal-sections-wrapper",
+    pin: true,
+    scrub: 1,
+    start: "top top",
+    end: () => `+=${totalWidth}`, 
+  }
 });
 
 gsap.to(".panel1 .center h1", {
@@ -56,18 +54,22 @@ gsap.to(".highlight-animate", {
 
 
 
-const link = document.querySelector(".hover-follow");
-const icon = link.querySelector("span");
+document.querySelectorAll(".hover-follow").forEach(link => {
+    const icon = link.querySelector("span");
 
-link.addEventListener("mousemove", (e) => {
-    const rect = link.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width /2;
-    const y = e.clientY - rect.top - rect.height/2;
-    icon.style.transform = `translate(${x * 0.4}px, ${y * 0.4}px) scale(1.5)`;
-})
-link.addEventListener("mouseleave", (e) => {
-    icon.style.transform = "translate(0, 0)";
-})
+    link.addEventListener("mousemove", (e) => {
+        const rect = link.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        icon.style.transform =
+            `translate(${x * 0.4}px, ${y * 0.4}px) scale(1.5)`;
+    });
+
+    link.addEventListener("mouseleave", () => {
+        icon.style.transform = "translate(0, 0)";
+    });
+});
+
 const video = document.getElementById('hoverVideo');
 
 video.addEventListener('mouseenter', () => {

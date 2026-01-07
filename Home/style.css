@@ -28,7 +28,7 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
     padding: 18px 40px;
 }
 
@@ -76,7 +76,7 @@ footer a {
    HORIZONTAL PANELS
 -------------------------------------------------- */
 .horizontal-sections-wrapper {
-    height: 700vh;
+
     position: relative;
 }
 
@@ -251,9 +251,10 @@ footer a {
     width: 40%;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    color: yellow;
     align-items: center;
     justify-content: center;
-    color: white;
     border: 1px solid #9e9e9e;
     background-image: url('/image/leap.jpg') ;
     background-repeat: no-repeat;
@@ -288,7 +289,7 @@ footer a {
     filter: blur(4px) brightness(0.7);
 }
 
-.hover-follow {
+.panel2 .hover-follow {
     position: relative;
     width: 100px;
     height: 100px;
@@ -299,7 +300,7 @@ footer a {
     overflow: hidden;
 }
 
-.hover-follow span {
+.panel2 .hover-follow span {
     position: absolute;
     transition: transform 0.15s ease;
     pointer-events: none; /* VERY IMPORTANT */
@@ -415,9 +416,10 @@ footer a {
         width: 50%;
         height: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        color: white;
+        color: yellow;
         border: 1px solid #9e9e9e;
         background-image: url('/image/ukNha.jpg') ;
         background-repeat: no-repeat;
@@ -456,9 +458,10 @@ footer a {
     width: 50%;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    color: yellow;
     align-items: center;
     justify-content: center;
-    color: white;
     border: 1px solid #9e9e9e;
     background-image: url('/image/sambath.jpg') ;
     background-repeat: no-repeat;
@@ -575,7 +578,8 @@ footer a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    flex-direction: column;
+    color: yellow;
     border: 1px solid #9e9e9e;
     background-image: url('/image/Nhaoun.jpg') ;
     background-repeat: no-repeat;
@@ -634,4 +638,363 @@ footer a {
     height: 100%;
     object-fit: cover;   
     display: block;
+}
+.panel5{
+    margin: 70px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    border-right: 1px solid #9e9e9e;
+}
+.panel5 .left{
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    border-right: 1px solid #9e9e9e;
+}
+.panel5 .left .image{
+    background-image: url('https://cdn.britannica.com/99/124299-050-4B4D509F/Linus-Torvalds-2012.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+.panel5 .left .image:hover{
+    transform: scale(1.1);
+}
+.panel5 .right{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.panel5 .center{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border-left: 1px solid #9e9e9e;
+}
+.panel5 .center .heading{
+    background-color: yellow;
+    width: 100%;
+    padding: 30px 20px;
+    border-bottom: 1px solid #9e9e9e;
+    font-family: "Comfortaa", sans-serif;
+}
+.panel5 .center .descript{
+    padding: 20px;
+    color:#565656;
+    border-right: 1px solid #9e9e9e;
+    line-height: 1.6;
+}
+.panel5 .center .descript h1{
+    font-size: 2rem;
+    color: black;
+    font-family: "Michroma", sans-serif;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.panel5 .center .descript p{
+    font-size: 1.5rem;
+    color:#565656;
+    font-family: "Smooch Sans", sans-serif;
+}
+.panel5 .center .imagePart {
+    width: 100%;
+    height: 60%;
+    background-image: url('/image/sambath.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50%;
+    object-fit: cover;
+}
+.panel5 .right .team{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: yellow;
+    border: 1px solid #9e9e9e;
+    background-image: url('/image/sophou.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+.panel5 .right .team h1{
+    font-size: 3rem;
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.panel5 .right .team:hover h1{
+    opacity: 1;
+}
+.panel5 .right .team::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.5s ease;
+    z-index: 1;
+}
+.panel5 .right .team:hover::before{
+    filter: blur(4px) brightness(0.7);
+}
+.panel5 .right .text{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.panel5 .right .text .heading{
+    background-color: yellow;
+    width: 100%;
+    padding: 30px 20px;
+    border-bottom: 1px solid #9e9e9e;
+    font-family: "Comfortaa", sans-serif;
+}
+.panel5 .right .text .descript{
+    padding: 20px;
+    color:#565656;
+    border-right: 1px solid #9e9e9e;
+    line-height: 1.6;
+}
+.panel5 .right .text .descript h1{
+    font-size: 2rem;
+    color: black;
+    
+    font-family: "Michroma", sans-serif;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.panel5 .right .text .descript p{
+    font-size: 1.5rem;
+    color:#565656;
+    font-family: "Smooch Sans", sans-serif;
+}
+.panel6 {
+    margin: 70px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+}
+.panel6 .left{
+    width: 30%;
+    height: 100%;
+}
+.panel6 .left .frame1{
+    width: 100%;
+    height: 45%;
+    overflow: hidden;
+    border-bottom: 1px solid #9e9e9e;
+}
+
+
+
+.panel6 .left .frame1 .team1{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: yellow;
+    border: 1px solid #9e9e9e;
+    background-image: url('/image/leap.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+.panel6 .left .frame1 .team1 h1{
+    font-size: 3rem;
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.panel6 .left .frame1 .team1:hover h1{
+    opacity: 1;
+}
+.panel6 .left .frame1 .team1::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.5s ease;
+    z-index: 1;
+}
+.panel6 .left .frame1 .team1:hover::before{
+    filter: blur(4px) brightness(0.7);
+}
+
+
+.panel6 .left .frame2 .team2{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: yellow;
+    border: 1px solid #9e9e9e;
+    background-image: url('/image/ukNha.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+.panel6 .left .frame2 .team2 h1{
+    font-size: 3rem;
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.panel6 .left .frame2 .team2:hover h1{
+    opacity: 1;
+}
+.panel6 .left .frame2 .team2::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.5s ease;
+    z-index: 1;
+}
+.panel6 .left .frame2 .team2:hover::before{
+    filter: blur(4px) brightness(0.7);
+}
+
+.panel6 .left .frame2{
+    width: 100%;
+    overflow: hidden;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.panel6 .right{
+    width: 70%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+}
+.panel6 .right .topContact{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0px 20px;
+    background-color: yellow;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 0.8rem;
+    color: black;
+    border: 1px solid #9e9e9e;
+}
+
+.panel6 .right .bottomContact{
+    margin-bottom: 140px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 0.8rem;
+    color: black;
+    border-top: 1px solid #9e9e9e;
+}
+.panel6 .bottomContact h1{
+    padding: 0px 20px;
+}
+.panel6 .bottomContact a{
+    color: black;
+    text-decoration: none;
+    align-items: center;
+    background-color: yellow;
+    padding: 32px;
+    border-left: 1px solid #9e9e9e;
+    border-right: 1px solid #9e9e9e;
+}
+.panel6 .bottomContact span{
+    font-size: 2rem;
+    transition: transform 0.15s ease;
+}
+.panel6 .hover-follow {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.panel6 .hover-follow span {
+    position: absolute;
+    transition: transform 0.15s ease;
+    pointer-events: none; /* VERY IMPORTANT */
+}
+.panel6 .centerContact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left; 
+    padding: 50px;
+}
+.panel6 .centerContact h1{
+    font-size: 3rem;
+    color: black;
+    font-family: "Michroma", sans-serif;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.panel6 .centerContact p{
+    font-size: 2rem;
+    color:#565656;
+    font-family: "Smooch Sans", sans-serif;
+    line-height: 1.6;
 }
