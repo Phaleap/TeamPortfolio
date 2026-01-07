@@ -255,7 +255,7 @@ footer a {
     justify-content: center;
     color: white;
     border: 1px solid #9e9e9e;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/78/Vasily_Perov_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%A4.%D0%9C.%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg') ;
+    background-image: url('/image/leap.jpg') ;
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
@@ -313,6 +313,8 @@ footer a {
     justify-content: center;
 }
 .panel3 .leftPart{
+    color: #676767;
+    font-family: "Orbitron", sans-serif;
     width: 50%;
     height: 100%;
     border-right: 1px solid #9e9e9e;
@@ -375,21 +377,261 @@ footer a {
     border-right: 1px solid #9e9e9e;
 }
 
-.panel3 .scroll-text{
+.scroll-container {
     overflow: hidden;
-    height: 60px;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.scroll-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 15s linear infinite; /* slower = smoother */
+}
+
+.scroll-container.reverse .scroll-track {
+    animation-direction: reverse; /* reverse if you want opposite direction */
+}
+
+
+.scroll-track h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 60px;
+    margin: 0;
+    padding-right: 60px;
+    flex-shrink: 0;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+/*team1*/
+    .panel3 .beneath .team1{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border: 1px solid #9e9e9e;
+        background-image: url('/image/ukNha.jpg') ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        position: relative;
+        overflow: hidden;
+    }
+    .panel3 .team1 h1{
+        font-size: 3rem;
+        font-family: "Momo Trust Display", sans-serif;
+        font-weight: 700;
+        position: relative;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    .panel3 .team1:hover h1{
+        opacity: 1;
+    }
+    .panel3 .team1::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: inherit;
+        background-size: cover;
+        background-position: center;
+        transition: filter 0.5s ease;
+        z-index: 1;
+    }
+    .panel3 .team1:hover::before{
+        filter: blur(4px) brightness(0.7);
+    }
+/*2*/
+.panel3 .team2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 1px solid #9e9e9e;
+    background-image: url('/image/sambath.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+.panel3 .team2 h1{
+    font-size: 3rem;
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.panel3 .team2:hover h1{
+    opacity: 1;
+}
+.panel3 .team2::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.5s ease;
+    z-index: 1;
+}
+.panel3 .team2:hover::before{
+    filter: blur(4px) brightness(0.7);
+}
+.panel3 .rightPart video {
+    width: 100%;
+    height: auto;
+    cursor: pointer; /* shows it’s interactive */
+    display: block;
+    object-fit: cover;
+}
+.panel3 .rightPart video {
+    transition: opacity 0.3s;
+    opacity: 0.8;
+}
+.panel3 .rightPart video:hover {
+    opacity: 1;
+}
+.panel4 .bottom video {
+    width: 100%;
+    height: auto;
+    cursor: pointer; /* shows it’s interactive */
+    display: block;
+    object-fit: cover;
+}
+.panel4 .bottom video {
+    transition: opacity 0.3s;
+    opacity: 0.8;
+}
+.panel4 .bottom video:hover {
+    opacity: 1;
+}
+.panel4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 1px solid #9e9e9e;
+}
+.panel4 .top{
+    margin: 70px 0px 0px 0px;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #9e9e9e;
+}
+.panel4 .top .left{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #9e9e9e;
+}
+.panel4 .top .right{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.panel4 .bottom{
+    height: 50%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.panel3 .scroll-text h1{
-    animation: autoScroll 3s ease-in-out infinite alternate;
+.panel4 .bottom .left, .right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     overflow: hidden;
 }
-@keyframes autoScroll{
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(-100%);
-    }
+.panel4 .bottom .left{
+    border-right: 1px solid #9e9e9e;
+}
+.panel4 .top .left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 1px solid #9e9e9e;
+    background-image: url('/image/Nhaoun.jpg') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+.panel4 .top .left h1{
+    font-size: 3rem;
+    font-family: "Momo Trust Display", sans-serif;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.panel4 .top .left:hover h1{
+    opacity: 1;
+}
+.panel4 .top .left::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    transition: filter 0.5s ease;
+    z-index: 1;
+}
+.panel4 .top .left:hover::before{
+    filter: blur(4px) brightness(0.7);
+}
+.panel4 .top .right p{
+    font-size: 1.5rem;
+    font-family: "Smooch Sans", sans-serif;
+    line-height: 1.6;
+    color:#565656;
+    width: 100%;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+}
+.panel4 .top .right h1{
+    font-size: 3rem;
+    font-family: "Michroma", sans-serif;
+    font-weight: 700;
+    width: 700px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.panel4 .bottom video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   
+    display: block;
 }
