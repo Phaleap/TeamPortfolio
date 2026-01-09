@@ -10,6 +10,8 @@
 html, body {
     overflow-x: hidden;
     background: #ffffff;
+    color: black;
+    scroll-behavior: smooth;
 }
 
 /* --------------------------------------------------
@@ -37,7 +39,6 @@ nav a {
     color: #000;
     font-size: 28px;
     font-family: "Comfortaa", sans-serif;
-    font-weight: 600;
 }
 
 /* --------------------------------------------------
@@ -76,7 +77,6 @@ footer a {
    HORIZONTAL PANELS
 -------------------------------------------------- */
 .horizontal-sections-wrapper {
-
     position: relative;
 }
 
@@ -998,3 +998,4 @@ footer a {
     font-family: "Smooch Sans", sans-serif;
     line-height: 1.6;
 }
+
